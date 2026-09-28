@@ -216,3 +216,18 @@ body { font-family: var(--font-body); color: var(--ink); -webkit-font-smoothing:
   .lobby-slots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .rcard { width: 40vw; }
 }
+
+/* tela dividida com 3 jogadores: o 4º quadrante mostra o logo */
+.hud-players.split-3::after {
+  content: 'Vaga-lumes';
+  position: absolute; left: 50%; top: 50%; right: 0; bottom: 0;
+  display: grid; place-items: center;
+  font-family: var(--font-display); font-weight: 700; font-size: 3.2em;
+  background: radial-gradient(circle at 50% 45%, rgba(255, 190, 90, 0.18), transparent 60%), linear-gradient(160deg, #1d1238, #0b0718);
+  color: #ffd27a; text-shadow: 0 0 30px rgba(255, 180, 70, 0.5);
+}
+
+/* cortina de transição entre mundos */
+.layer-curtain { background: radial-gradient(circle at 50% 50%, #1d1238, #07060f 70%); opacity: 0; transition: opacity 0.3s ease; }
+.layer-curtain.show { opacity: 1; pointer-events: auto; }
+.layer-curtain.show::after { content: '✦'; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 2.4em; color: #ffd27a; text-shadow: 0 0 24px #ffb347; animation: twinkle 0.9s ease-in-out infinite; }

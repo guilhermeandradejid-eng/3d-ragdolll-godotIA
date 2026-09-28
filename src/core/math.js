@@ -64,10 +64,15 @@ export class Spring {
     this.k = stiffness;
     this.c = damping;
   }
+  // Euler semi-implícito com subpassos: estável mesmo com quadros longos
   update(dt) {
-    const f = -this.k * (this.value - this.target) - this.c * this.velocity;
-    this.velocity += f * dt;
-    this.value += this.velocity * dt;
+    const n = Math.max(1, Math.ceil(dt * 120));
+    const h = dt / n;
+    for (let i = 0; i < n; i++) {
+      const f = -this.k * (this.value - this.target) - this.c * this.velocity;
+      this.velocity += f * h;
+      this.value += this.velocity * h;
+    }
     return this.value;
   }
   impulse(v) {

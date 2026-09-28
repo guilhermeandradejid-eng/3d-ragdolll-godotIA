@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg-nox" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d1238"/><stop offset="1" stop-color="#0b0718"/></linearGradient>
+    <radialGradient id="glow-nox" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#241638" stop-opacity=".35"/><stop offset="1" stop-color="#241638" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="700" rx="28" fill="url(#bg-nox)"/>
+  <circle cx="0" cy="0" r="0.6" fill="#fff" opacity="0.15"/><circle cx="283" cy="157" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="566" cy="314" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="849" cy="471" r="0.6" fill="#fff" opacity="0.39"/><circle cx="1132" cy="628" r="1.2" fill="#fff" opacity="0.15"/><circle cx="215" cy="85" r="1.7999999999999998" fill="#fff" opacity="0.22999999999999998"/><circle cx="498" cy="242" r="0.6" fill="#fff" opacity="0.31"/><circle cx="781" cy="399" r="1.2" fill="#fff" opacity="0.39"/><circle cx="1064" cy="556" r="1.7999999999999998" fill="#fff" opacity="0.15"/><circle cx="147" cy="13" r="0.6" fill="#fff" opacity="0.22999999999999998"/><circle cx="430" cy="170" r="1.2" fill="#fff" opacity="0.31"/><circle cx="713" cy="327" r="1.7999999999999998" fill="#fff" opacity="0.39"/><circle cx="996" cy="484" r="0.6" fill="#fff" opacity="0.15"/><circle cx="79" cy="641" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="362" cy="98" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="645" cy="255" r="0.6" fill="#fff" opacity="0.39"/><circle cx="928" cy="412" r="1.2" fill="#fff" opacity="0.15"/><circle cx="11" cy="569" r="1.7999999999999998" fill="#fff" opacity="0.22999999999999998"/><circle cx="294" cy="26" r="0.6" fill="#fff" opacity="0.31"/><circle cx="577" cy="183" r="1.2" fill="#fff" opacity="0.39"/><circle cx="860" cy="340" r="1.7999999999999998" fill="#fff" opacity="0.15"/><circle cx="1143" cy="497" r="0.6" fill="#fff" opacity="0.22999999999999998"/><circle cx="226" cy="654" r="1.2" fill="#fff" opacity="0.31"/><circle cx="509" cy="111" r="1.7999999999999998" fill="#fff" opacity="0.39"/><circle cx="792" cy="268" r="0.6" fill="#fff" opacity="0.15"/><circle cx="1075" cy="425" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="158" cy="582" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="441" cy="39" r="0.6" fill="#fff" opacity="0.39"/><circle cx="724" cy="196" r="1.2" fill="#fff" opacity="0.15"/><circle cx="1007" cy="353" r="1.7999999999999998" fill="#fff" opacity="0.22999999999999998"/><circle cx="90" cy="510" r="0.6" fill="#fff" opacity="0.31"/><circle cx="373" cy="667" r="1.2" fill="#fff" opacity="0.39"/><circle cx="656" cy="124" r="1.7999999999999998" fill="#fff" opacity="0.15"/><circle cx="939" cy="281" r="0.6" fill="#fff" opacity="0.22999999999999998"/><circle cx="22" cy="438" r="1.2" fill="#fff" opacity="0.31"/><circle cx="305" cy="595" r="1.7999999999999998" fill="#fff" opacity="0.39"/><circle cx="588" cy="52" r="0.6" fill="#fff" opacity="0.15"/><circle cx="871" cy="209" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="1154" cy="366" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="237" cy="523" r="0.6" fill="#fff" opacity="0.39"/>
+  <circle cx="270" cy="330" r="260" fill="url(#glow-nox)"/>
+  <svg x="40" y="90" width="460" height="460" viewBox="0 0 200 200" ><defs><radialGradient id="nx-bg" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#3a1860"/><stop offset="1" stop-color="#0d0618" stop-opacity="0"/></radialGradient>
+     <linearGradient id="nx-wing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5a2f8f"/><stop offset=".6" stop-color="#2a1545"/><stop offset="1" stop-color="#1a0d2a"/></linearGradient>
+     <linearGradient id="nx-wing2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a1f5a"/><stop offset="1" stop-color="#6a3aa8"/></linearGradient>
+     <radialGradient id="nx-body" cx="40%" cy="30%" r="80%"><stop offset="0" stop-color="#4a3470"/><stop offset="1" stop-color="#150d24"/></radialGradient>
+     <radialGradient id="nx-eye" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#ffd0f4"/><stop offset="1" stop-color="#ff5ac8"/></radialGradient></defs>
+    <rect width="200" height="200" fill="url(#nx-bg)"/>
+    <g opacity=".95">
+      <path d="M100 96 Q40 20 6 40 Q-4 90 40 120 Q70 130 100 110 Z" fill="url(#nx-wing)"/>
+      <path d="M100 96 Q160 20 194 40 Q204 90 160 120 Q130 130 100 110 Z" fill="url(#nx-wing)"/>
+      <path d="M100 112 Q60 130 36 170 Q60 186 90 150 Z" fill="url(#nx-wing2)"/>
+      <path d="M100 112 Q140 130 164 170 Q140 186 110 150 Z" fill="url(#nx-wing2)"/>
+      <circle cx="46" cy="70" r="14" fill="#ff5ac8"/><circle cx="46" cy="70" r="7" fill="#fff"/>
+      <circle cx="154" cy="70" r="14" fill="#ff5ac8"/><circle cx="154" cy="70" r="7" fill="#fff"/>
+      <circle cx="46" cy="70" r="22" fill="none" stroke="#ff5ac8" stroke-width="2" opacity=".5"/>
+      <circle cx="154" cy="70" r="22" fill="none" stroke="#ff5ac8" stroke-width="2" opacity=".5"/>
+    </g>
+    <path d="M92 60 Q70 20 50 14" stroke="#3b2a55" stroke-width="3" fill="none"/>
+    <path d="M108 60 Q130 20 150 14" stroke="#3b2a55" stroke-width="3" fill="none"/>
+    <g stroke="#3b2a55" stroke-width="2"><path d="M70 30 l-6 -8"/><path d="M62 24 l-6 -6"/><path d="M130 30 l6 -8"/><path d="M138 24 l6 -6"/></g>
+    <ellipse cx="100" cy="128" rx="20" ry="46" fill="url(#nx-body)"/>
+    <circle cx="100" cy="82" r="28" fill="url(#nx-body)"/>
+    <g fill="#2a1d45"><circle cx="78" cy="70" r="8"/><circle cx="122" cy="70" r="8"/><circle cx="84" cy="100" r="7"/><circle cx="116" cy="100" r="7"/></g>
+    <ellipse cx="88" cy="82" rx="10" ry="12" fill="url(#nx-eye)"/>
+    <ellipse cx="112" cy="82" rx="10" ry="12" fill="url(#nx-eye)"/>
+    <path d="M88 100 Q100 94 112 100 Q100 108 88 100 Z" fill="#ff5ac8" opacity=".85"/>
+    <path d="M76 70 L96 76" stroke="#160f24" stroke-width="3" stroke-linecap="round"/>
+    <path d="M124 70 L104 76" stroke="#160f24" stroke-width="3" stroke-linecap="round"/></svg>
+  <rect x="40" y="572" width="96" height="96" rx="14" fill="#efe7f8"/>
+  <svg x="48" y="580" width="80" height="80" viewBox="0 0 200 200" ><defs></defs>
+    <rect width="200" height="200" fill="#1b1430"/>
+    <g >
+      <path d="M100 96 Q40 20 6 40 Q-4 90 40 120 Q70 130 100 110 Z" fill="#1b1430"/>
+      <path d="M100 96 Q160 20 194 40 Q204 90 160 120 Q130 130 100 110 Z" fill="#1b1430"/>
+      <path d="M100 112 Q60 130 36 170 Q60 186 90 150 Z" fill="#1b1430"/>
+      <path d="M100 112 Q140 130 164 170 Q140 186 110 150 Z" fill="#1b1430"/>
+      <circle cx="46" cy="70" r="14" fill="#1b1430"/><circle cx="46" cy="70" r="7" fill="#1b1430"/>
+      <circle cx="154" cy="70" r="14" fill="#1b1430"/><circle cx="154" cy="70" r="7" fill="#1b1430"/>
+      <circle cx="46" cy="70" r="22" fill="none" stroke="#1b1430" stroke-width="2" />
+      <circle cx="154" cy="70" r="22" fill="none" stroke="#1b1430" stroke-width="2" />
+    </g>
+    <path d="M92 60 Q70 20 50 14" stroke="#1b1430" stroke-width="3" fill="none"/>
+    <path d="M108 60 Q130 20 150 14" stroke="#1b1430" stroke-width="3" fill="none"/>
+    <g stroke="#1b1430" stroke-width="2"><path d="M70 30 l-6 -8"/><path d="M62 24 l-6 -6"/><path d="M130 30 l6 -8"/><path d="M138 24 l6 -6"/></g>
+    <ellipse cx="100" cy="128" rx="20" ry="46" fill="#1b1430"/>
+    <circle cx="100" cy="82" r="28" fill="#1b1430"/>
+    <g fill="#1b1430"><circle cx="78" cy="70" r="8"/><circle cx="122" cy="70" r="8"/><circle cx="84" cy="100" r="7"/><circle cx="116" cy="100" r="7"/></g>
+    <ellipse cx="88" cy="82" rx="10" ry="12" fill="#1b1430"/>
+    <ellipse cx="112" cy="82" rx="10" ry="12" fill="#1b1430"/>
+    <path d="M88 100 Q100 94 112 100 Q100 108 88 100 Z" fill="#1b1430" />
+    <path d="M76 70 L96 76" stroke="#1b1430" stroke-width="3" stroke-linecap="round"/>
+    <path d="M124 70 L104 76" stroke="#1b1430" stroke-width="3" stroke-linecap="round"/></svg>
+  <text x="150" y="610" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="14" fill="#bfb3d6">Teste de silhueta:</text>
+  <text x="150" y="630" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="14" fill="#bfb3d6">a forma precisa ser reconhecível</text>
+  <text x="150" y="650" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="14" fill="#bfb3d6">mesmo toda preenchida de preto.</text>
+  <text x="560" y="92" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="54" font-weight="bold" fill="#fff8ec">Nox</text>
+  <text x="560" y="126" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="22" font-weight="bold" fill="#241638">A Mariposa do Eclipse</text>
+  <text x="560" y="156" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="16" fill="#bfb3d6">Antagonista · Chefe final · “Todos sempre olham para a luz. Ninguém olha para a sombra!”</text>
+  <line x1="560" y1="172" x2="1150" y2="172" stroke="#ffffff22"/>
+  <text x="560" y="200" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#241638" letter-spacing="1.5">PERSONALIDADE</text>
+  <text x="560" y="224" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="17" fill="#f3ecff"><tspan x="560" dy="0">A sombra do Grande Farol. Passou a vida inteira ao redor</tspan><tspan x="560" dy="23">da luz sem nunca poder tocá-la — e a solidão virou fome.</tspan></text>
+  <text x="560" y="302" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#241638" letter-spacing="1.5">HABILIDADE</text>
+  <text x="560" y="326" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="17" fill="#f3ecff"><tspan x="560" dy="0">Orbes de sombra teleguiados, mergulho com onda de choque,</tspan><tspan x="560" dy="23">rajadas de asas e invocação de Sombrinhas.</tspan></text>
+  <text x="560" y="404" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#241638" letter-spacing="1.5">DESIGN</text>
+  <text x="560" y="428" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="17" fill="#f3ecff"><tspan x="560" dy="0">Mariposa gigante com asas de "olhos" brilhantes (shader</tspan><tspan x="560" dy="23">procedural), pelagem escura e o núcleo dourado da Chama</tspan><tspan x="560" dy="23">Primordial no peito — o ponto fraco. Na redenção, encolhe</tspan><tspan x="560" dy="23">e ganha tons de lavanda.</tspan></text>
+  
+  <text x="900" y="530" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#241638" letter-spacing="1.5">PALETA</text>
+  <g transform="translate(900 545)"><rect width="80" height="34" rx="8" fill="#241638" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#241638</text></g><g transform="translate(992 545)"><rect width="80" height="34" rx="8" fill="#5a2f8f" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#5a2f8f</text></g><g transform="translate(1084 545)"><rect width="80" height="34" rx="8" fill="#ff5ac8" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#ff5ac8</text></g><g transform="translate(900 607)"><rect width="80" height="34" rx="8" fill="#ffd6f6" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#ffd6f6</text></g><g transform="translate(992 607)"><rect width="80" height="34" rx="8" fill="#ffcf5a" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#ffcf5a</text></g>
+  <text x="40" y="52" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="16" fill="#8f82ad" letter-spacing="2">VAGA-LUMES: O ÚLTIMO FAROL · FICHA DE PERSONAGEM</text>
+</svg>

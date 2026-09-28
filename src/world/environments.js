@@ -31,48 +31,48 @@ export const ENVIRONMENTS = {
   // Capítulo 2 — Desfiladeiro Estelar: noite azul, aurora boreal, cristais e cogumelos que brilham.
   night: {
     sunDir: dir(-0.35, 0.55, -0.75),
-    light: { sunColor: '#a9bcff', sunIntensity: 1.25, hemiSky: '#4c5cb0', hemiGround: '#2c2150', hemiIntensity: 0.55, shadowIntensity: 0.75 },
-    envIntensity: 0.55,
+    light: { sunColor: '#b3c3ff', sunIntensity: 2.1, hemiSky: '#5a6cc4', hemiGround: '#3a2c66', hemiIntensity: 0.95, shadowIntensity: 0.7 },
+    envIntensity: 0.85,
     sky: {
       sunColor: '#c9d6ff', zenith: '#070b26', horizon: '#2a2d6a', ground: '#1a1640', cloudLit: '#4e5596', cloudShadow: '#171736',
       sunSize: 0.03, sunIntensity: 7, halo: 0.8, horizonGlow: 0.5, gradientExp: 0.45, cloudCover: 0.22, cloudSpeed: 0.004, cloudScale: 0.8,
-      stars: 1, aurora: 1.2, auroraOffset: 3.2, moon: true,
+      stars: 1, aurora: 1.2, auroraOffset: 1.3, moon: true,
     },
     fog: { color: '#262a5c', sunColor: '#5d68b0', density: 0.004, heightFalloff: 0.06, base: -40, dist: 0.0014, max: 0.93 },
     terrain: { grass: '#3f8f8a', grassDark: '#1c4b58', rock: '#5c5a86', rockDark: '#2b2949', dirt: '#3e3460' },
     grass: { base: '#123a4a', tip: '#5fd6c0' },
     sea: { top: '#3c4285', shadow: '#12123a', y: -34, glow: 0.35 },
     grade: {
-      exposure: 1.2, saturation: 1.12, contrast: 1.08, tint: [0.96, 1.0, 1.08], bloomIntensity: 1.35, bloomThreshold: 0.9,
+      exposure: 1.4, saturation: 1.12, contrast: 1.06, tint: [0.97, 1.0, 1.06], bloomIntensity: 1.3, bloomThreshold: 1.0,
       godStrength: 0.35, sunColor: '#9fb2ff', vignette: 0.38, flareIntensity: 0.12, aoStrength: 0.75,
     },
     wind: [0.5, 0.25, 0.2],
     ambient: 'fireflies',
-    playerLight: 1,
+    playerLight: 1.7,
   },
 
   // Capítulo 3 — Cidadela do Eclipse: crepúsculo eterno magenta, sol eclipsado com coroa.
   eclipse: {
-    sunDir: dir(-0.15, 0.3, -0.94),
-    light: { sunColor: '#ff9c78', sunIntensity: 2.0, hemiSky: '#8a4f9a', hemiGround: '#5a2a36', hemiIntensity: 0.6, shadowIntensity: 0.8 },
-    envIntensity: 0.6,
+    sunDir: dir(-0.55, 0.34, -0.76),
+    light: { sunColor: '#ffb08c', sunIntensity: 2.9, hemiSky: '#9a62ac', hemiGround: '#6a3a48', hemiIntensity: 0.95, shadowIntensity: 0.75 },
+    envIntensity: 0.85,
     sky: {
       sunColor: '#ff9a70', zenith: '#1a0d33', horizon: '#c5476c', ground: '#3b1a36', cloudLit: '#e07896', cloudShadow: '#3a173d',
       sunSize: 0.075, sunIntensity: 0, halo: 1.3, horizonGlow: 1.6, gradientExp: 0.55, cloudCover: 0.55, cloudSpeed: 0.014, cloudScale: 1.1,
       eclipse: 1, corona: '#ffcf8f', stars: 0.35,
     },
     fog: { color: '#6a2f55', sunColor: '#ff8f6f', density: 0.004, heightFalloff: 0.06, base: -40, dist: 0.0013, max: 0.93 },
-    terrain: { grass: '#7c9a5c', grassDark: '#3e5a3a', rock: '#8a7688', rockDark: '#43334a', dirt: '#6a4550' },
-    grass: { base: '#3a3a3a', tip: '#a8a070' },
+    terrain: { grass: '#8aa866', grassDark: '#4a6a44', rock: '#a08c9e', rockDark: '#57445e', dirt: '#7a5560' },
+    grass: { base: '#5a5642', tip: '#d4c08a' },
     sea: { top: '#8c4a70', shadow: '#2c1030', y: -34, glow: 0.8 },
     grade: {
-      exposure: 1.12, saturation: 1.08, contrast: 1.1, tint: [1.05, 0.96, 1.0], bloomIntensity: 1.2, bloomThreshold: 0.95,
+      exposure: 1.32, saturation: 1.06, contrast: 1.06, tint: [1.03, 0.97, 1.0], bloomIntensity: 1.15, bloomThreshold: 1.05,
       godStrength: 1.0, sunColor: '#ffb07c', vignette: 0.4, flareIntensity: 0.14, aoStrength: 0.8,
     },
     wind: [1.2, 0.6, 0.9],
     ambient: 'embers',
     lightning: true,
-    playerLight: 0.6,
+    playerLight: 1.4,
   },
 
   // Final — o sol volta a nascer.

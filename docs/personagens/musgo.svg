@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg-musgo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d1238"/><stop offset="1" stop-color="#0b0718"/></linearGradient>
+    <radialGradient id="glow-musgo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#a39e93" stop-opacity=".35"/><stop offset="1" stop-color="#a39e93" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="700" rx="28" fill="url(#bg-musgo)"/>
+  <circle cx="0" cy="0" r="0.6" fill="#fff" opacity="0.15"/><circle cx="283" cy="157" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="566" cy="314" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="849" cy="471" r="0.6" fill="#fff" opacity="0.39"/><circle cx="1132" cy="628" r="1.2" fill="#fff" opacity="0.15"/><circle cx="215" cy="85" r="1.7999999999999998" fill="#fff" opacity="0.22999999999999998"/><circle cx="498" cy="242" r="0.6" fill="#fff" opacity="0.31"/><circle cx="781" cy="399" r="1.2" fill="#fff" opacity="0.39"/><circle cx="1064" cy="556" r="1.7999999999999998" fill="#fff" opacity="0.15"/><circle cx="147" cy="13" r="0.6" fill="#fff" opacity="0.22999999999999998"/><circle cx="430" cy="170" r="1.2" fill="#fff" opacity="0.31"/><circle cx="713" cy="327" r="1.7999999999999998" fill="#fff" opacity="0.39"/><circle cx="996" cy="484" r="0.6" fill="#fff" opacity="0.15"/><circle cx="79" cy="641" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="362" cy="98" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="645" cy="255" r="0.6" fill="#fff" opacity="0.39"/><circle cx="928" cy="412" r="1.2" fill="#fff" opacity="0.15"/><circle cx="11" cy="569" r="1.7999999999999998" fill="#fff" opacity="0.22999999999999998"/><circle cx="294" cy="26" r="0.6" fill="#fff" opacity="0.31"/><circle cx="577" cy="183" r="1.2" fill="#fff" opacity="0.39"/><circle cx="860" cy="340" r="1.7999999999999998" fill="#fff" opacity="0.15"/><circle cx="1143" cy="497" r="0.6" fill="#fff" opacity="0.22999999999999998"/><circle cx="226" cy="654" r="1.2" fill="#fff" opacity="0.31"/><circle cx="509" cy="111" r="1.7999999999999998" fill="#fff" opacity="0.39"/><circle cx="792" cy="268" r="0.6" fill="#fff" opacity="0.15"/><circle cx="1075" cy="425" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="158" cy="582" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="441" cy="39" r="0.6" fill="#fff" opacity="0.39"/><circle cx="724" cy="196" r="1.2" fill="#fff" opacity="0.15"/><circle cx="1007" cy="353" r="1.7999999999999998" fill="#fff" opacity="0.22999999999999998"/><circle cx="90" cy="510" r="0.6" fill="#fff" opacity="0.31"/><circle cx="373" cy="667" r="1.2" fill="#fff" opacity="0.39"/><circle cx="656" cy="124" r="1.7999999999999998" fill="#fff" opacity="0.15"/><circle cx="939" cy="281" r="0.6" fill="#fff" opacity="0.22999999999999998"/><circle cx="22" cy="438" r="1.2" fill="#fff" opacity="0.31"/><circle cx="305" cy="595" r="1.7999999999999998" fill="#fff" opacity="0.39"/><circle cx="588" cy="52" r="0.6" fill="#fff" opacity="0.15"/><circle cx="871" cy="209" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="1154" cy="366" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="237" cy="523" r="0.6" fill="#fff" opacity="0.39"/>
+  <circle cx="270" cy="330" r="260" fill="url(#glow-musgo)"/>
+  <svg x="40" y="90" width="460" height="460" viewBox="0 0 200 200" ><defs><radialGradient id="mg-aura" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#b6ff8a" stop-opacity=".45"/><stop offset="1" stop-color="#b6ff8a" stop-opacity="0"/></radialGradient>
+     <linearGradient id="mg-stone" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cfc9bd"/><stop offset=".6" stop-color="#a39e93"/><stop offset="1" stop-color="#6f6a61"/></linearGradient>
+     <linearGradient id="mg-moss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fe06a"/><stop offset="1" stop-color="#3f8f3a"/></linearGradient></defs>
+    <circle class="aura" cx="100" cy="112" r="92" fill="url(#mg-aura)"/>
+    <ellipse class="aura" cx="100" cy="188" rx="60" ry="8" fill="#000" opacity=".18"/>
+    <path d="M62 170 L58 186 L84 186 L82 170 Z" fill="#8f8a80"/>
+    <path d="M118 170 L116 186 L142 186 L138 170 Z" fill="#8f8a80"/>
+    <path d="M30 108 L14 128 L20 158 L44 162 L52 132 Z" fill="url(#mg-stone)"/>
+    <path d="M170 108 L186 128 L180 158 L156 162 L148 132 Z" fill="url(#mg-stone)"/>
+    <path d="M16 136 Q26 126 40 132 L36 142 Q24 140 18 146 Z" fill="#5fae45"/>
+    <path d="M40 76 L78 58 L124 56 L162 76 L176 118 L160 164 L118 178 L80 178 L40 164 L24 118 Z" fill="url(#mg-stone)"/>
+    <g fill="#ffffff" opacity=".12"><path d="M78 58 L124 56 L112 96 L84 98 Z"/><path d="M40 76 L78 58 L84 98 L44 112 Z"/></g>
+    <g fill="#000" opacity=".12"><path d="M160 164 L118 178 L124 140 L168 130 Z"/><path d="M40 164 L80 178 L78 142 L32 132 Z"/></g>
+    <path d="M36 84 Q44 50 100 48 Q156 50 166 84 Q150 76 140 88 Q128 74 114 86 Q100 72 86 86 Q72 74 60 88 Q50 76 36 84 Z" fill="url(#mg-moss)"/>
+    <circle cx="62" cy="62" r="7" fill="#7fcd5a"/><circle cx="132" cy="58" r="6" fill="#7fcd5a"/><circle cx="100" cy="52" r="5" fill="#3f8f3a"/>
+    <path d="M100 50 Q98 34 102 22" stroke="#4fae3a" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M101 34 Q116 22 128 30 Q114 38 101 34 Z" fill="#7fdc4f"/>
+    <path d="M100 38 Q84 24 72 32 Q86 42 100 38 Z" fill="#6ccb45"/>
+    <g transform="translate(102 18)">
+      <circle cx="0" cy="-8" r="6" fill="#ff7ab8"/><circle cx="8" cy="-2" r="6" fill="#ff7ab8"/><circle cx="5" cy="7" r="6" fill="#ff7ab8"/>
+      <circle cx="-5" cy="7" r="6" fill="#ff7ab8"/><circle cx="-8" cy="-2" r="6" fill="#ff7ab8"/><circle cx="0" cy="0" r="4.5" fill="#ffe066"/>
+    </g>
+    
+  <ellipse cx="80" cy="112" rx="8.5" ry="10" fill="#fff"/>
+  <ellipse cx="81" cy="114" rx="5.78" ry="7" fill="#1e5a2a"/>
+  <ellipse cx="81" cy="114.5" rx="3.23" ry="4.2" fill="#160f24"/>
+  <circle cx="83.38" cy="110.2" r="2.55" fill="#fff"/>
+  <circle cx="78.875" cy="116.5" r="1.02" fill="#fff"/>
+    
+  <ellipse cx="120" cy="112" rx="8.5" ry="10" fill="#fff"/>
+  <ellipse cx="121" cy="114" rx="5.78" ry="7" fill="#1e5a2a"/>
+  <ellipse cx="121" cy="114.5" rx="3.23" ry="4.2" fill="#160f24"/>
+  <circle cx="123.38" cy="110.2" r="2.55" fill="#fff"/>
+  <circle cx="118.875" cy="116.5" r="1.02" fill="#fff"/>
+    <ellipse cx="64" cy="128" rx="8" ry="5" fill="#ff9a8a" opacity=".55"/>
+    <ellipse cx="136" cy="128" rx="8" ry="5" fill="#ff9a8a" opacity=".55"/>
+    <path d="M84 132 Q100 146 116 132" stroke="#3b3530" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+    <circle cx="100" cy="158" r="9" fill="none" stroke="#b6ff8a" stroke-width="3.5"/>
+    <circle cx="100" cy="158" r="13" fill="#7dff5a" opacity=".25"/></svg>
+  <rect x="40" y="572" width="96" height="96" rx="14" fill="#efe7f8"/>
+  <svg x="48" y="580" width="80" height="80" viewBox="0 0 200 200" ><defs></defs>
+    
+    
+    <path d="M62 170 L58 186 L84 186 L82 170 Z" fill="#1b1430"/>
+    <path d="M118 170 L116 186 L142 186 L138 170 Z" fill="#1b1430"/>
+    <path d="M30 108 L14 128 L20 158 L44 162 L52 132 Z" fill="#1b1430"/>
+    <path d="M170 108 L186 128 L180 158 L156 162 L148 132 Z" fill="#1b1430"/>
+    <path d="M16 136 Q26 126 40 132 L36 142 Q24 140 18 146 Z" fill="#1b1430"/>
+    <path d="M40 76 L78 58 L124 56 L162 76 L176 118 L160 164 L118 178 L80 178 L40 164 L24 118 Z" fill="#1b1430"/>
+    <g fill="#1b1430" ><path d="M78 58 L124 56 L112 96 L84 98 Z"/><path d="M40 76 L78 58 L84 98 L44 112 Z"/></g>
+    <g fill="#1b1430" ><path d="M160 164 L118 178 L124 140 L168 130 Z"/><path d="M40 164 L80 178 L78 142 L32 132 Z"/></g>
+    <path d="M36 84 Q44 50 100 48 Q156 50 166 84 Q150 76 140 88 Q128 74 114 86 Q100 72 86 86 Q72 74 60 88 Q50 76 36 84 Z" fill="#1b1430"/>
+    <circle cx="62" cy="62" r="7" fill="#1b1430"/><circle cx="132" cy="58" r="6" fill="#1b1430"/><circle cx="100" cy="52" r="5" fill="#1b1430"/>
+    <path d="M100 50 Q98 34 102 22" stroke="#1b1430" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M101 34 Q116 22 128 30 Q114 38 101 34 Z" fill="#1b1430"/>
+    <path d="M100 38 Q84 24 72 32 Q86 42 100 38 Z" fill="#1b1430"/>
+    <g transform="translate(102 18)">
+      <circle cx="0" cy="-8" r="6" fill="#1b1430"/><circle cx="8" cy="-2" r="6" fill="#1b1430"/><circle cx="5" cy="7" r="6" fill="#1b1430"/>
+      <circle cx="-5" cy="7" r="6" fill="#1b1430"/><circle cx="-8" cy="-2" r="6" fill="#1b1430"/><circle cx="0" cy="0" r="4.5" fill="#1b1430"/>
+    </g>
+    
+  <ellipse cx="80" cy="112" rx="8.5" ry="10" fill="#1b1430"/>
+  <ellipse cx="81" cy="114" rx="5.78" ry="7" fill="#1b1430"/>
+  <ellipse cx="81" cy="114.5" rx="3.23" ry="4.2" fill="#1b1430"/>
+  <circle cx="83.38" cy="110.2" r="2.55" fill="#1b1430"/>
+  <circle cx="78.875" cy="116.5" r="1.02" fill="#1b1430"/>
+    
+  <ellipse cx="120" cy="112" rx="8.5" ry="10" fill="#1b1430"/>
+  <ellipse cx="121" cy="114" rx="5.78" ry="7" fill="#1b1430"/>
+  <ellipse cx="121" cy="114.5" rx="3.23" ry="4.2" fill="#1b1430"/>
+  <circle cx="123.38" cy="110.2" r="2.55" fill="#1b1430"/>
+  <circle cx="118.875" cy="116.5" r="1.02" fill="#1b1430"/>
+    <ellipse cx="64" cy="128" rx="8" ry="5" fill="#1b1430" />
+    <ellipse cx="136" cy="128" rx="8" ry="5" fill="#1b1430" />
+    <path d="M84 132 Q100 146 116 132" stroke="#1b1430" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+    <circle cx="100" cy="158" r="9" fill="none" stroke="#1b1430" stroke-width="3.5"/>
+    <circle cx="100" cy="158" r="13" fill="#1b1430" /></svg>
+  <text x="150" y="610" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="14" fill="#bfb3d6">Teste de silhueta:</text>
+  <text x="150" y="630" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="14" fill="#bfb3d6">a forma precisa ser reconhecível</text>
+  <text x="150" y="650" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="14" fill="#bfb3d6">mesmo toda preenchida de preto.</text>
+  <text x="560" y="92" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="54" font-weight="bold" fill="#fff8ec">Musgo</text>
+  <text x="560" y="126" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="22" font-weight="bold" fill="#a39e93">O Gigante Gentil</text>
+  <text x="560" y="156" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="16" fill="#bfb3d6">Herói · Jogável · “Hm. Juntos.”</text>
+  <line x1="560" y1="172" x2="1150" y2="172" stroke="#ffffff22"/>
+  <text x="560" y="200" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#a39e93" letter-spacing="1.5">PERSONALIDADE</text>
+  <text x="560" y="224" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="17" fill="#f3ecff"><tspan x="560" dy="0">Fala pouco, cuida de todo mundo e adora plantinhas. O mais</tspan><tspan x="560" dy="23">forte do grupo — e o mais delicado.</tspan></text>
+  <text x="560" y="302" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#a39e93" letter-spacing="1.5">HABILIDADE</text>
+  <text x="560" y="326" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="17" fill="#f3ecff"><tspan x="560" dy="0">Pesado: a patada no chão cria uma onda de choque bem</tspan><tspan x="560" dy="23">maior.</tspan></text>
+  <text x="560" y="404" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#a39e93" letter-spacing="1.5">DESIGN</text>
+  <text x="560" y="428" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="17" fill="#f3ecff"><tspan x="560" dy="0">Pedra facetada (flat shading) com capa de musgo, runa</tspan><tspan x="560" dy="23">verde brilhante no peito e um broto com flor rosa que</tspan><tspan x="560" dy="23">balança com molas (animação secundária).</tspan></text>
+  <text x="560" y="560" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" fill="#d9cfe8">Velocidade</text><rect x="680" y="547" width="40" height="14" rx="4" fill="#a39e93"/><rect x="726" y="547" width="40" height="14" rx="4" fill="#a39e93"/><rect x="772" y="547" width="40" height="14" rx="4" fill="#ffffff22"/><text x="560" y="586" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" fill="#d9cfe8">Pulo</text><rect x="680" y="573" width="40" height="14" rx="4" fill="#a39e93"/><rect x="726" y="573" width="40" height="14" rx="4" fill="#a39e93"/><rect x="772" y="573" width="40" height="14" rx="4" fill="#ffffff22"/><text x="560" y="612" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" fill="#d9cfe8">Peso</text><rect x="680" y="599" width="40" height="14" rx="4" fill="#a39e93"/><rect x="726" y="599" width="40" height="14" rx="4" fill="#a39e93"/><rect x="772" y="599" width="40" height="14" rx="4" fill="#a39e93"/><text x="560" y="638" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" fill="#d9cfe8">Tração</text><rect x="680" y="625" width="40" height="14" rx="4" fill="#a39e93"/><rect x="726" y="625" width="40" height="14" rx="4" fill="#a39e93"/><rect x="772" y="625" width="40" height="14" rx="4" fill="#a39e93"/>
+  <text x="900" y="530" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#a39e93" letter-spacing="1.5">PALETA</text>
+  <g transform="translate(900 545)"><rect width="80" height="34" rx="8" fill="#a39e93" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#a39e93</text></g><g transform="translate(992 545)"><rect width="80" height="34" rx="8" fill="#5fae45" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#5fae45</text></g><g transform="translate(1084 545)"><rect width="80" height="34" rx="8" fill="#7fdc4f" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#7fdc4f</text></g><g transform="translate(900 607)"><rect width="80" height="34" rx="8" fill="#ff7ab8" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#ff7ab8</text></g><g transform="translate(992 607)"><rect width="80" height="34" rx="8" fill="#b6ff8a" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#b6ff8a</text></g>
+  <text x="40" y="52" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="16" fill="#8f82ad" letter-spacing="2">VAGA-LUMES: O ÚLTIMO FAROL · FICHA DE PERSONAGEM</text>
+</svg>

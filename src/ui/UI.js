@@ -24,7 +24,7 @@ export class UI {
     this.game = game;
     this.root = root;
     this.layers = {};
-    for (const name of ['screen', 'hud', 'dialog', 'banner', 'toasts', 'hint', 'overlay', 'fps']) {
+    for (const name of ['screen', 'hud', 'dialog', 'banner', 'toasts', 'hint', 'overlay', 'curtain', 'fps']) {
       const l = h('div', `layer layer-${name}`);
       root.appendChild(l);
       this.layers[name] = l;
@@ -37,6 +37,10 @@ export class UI {
 
   sfx(n) {
     this.game.audio?.sfx(n);
+  }
+
+  curtain(on) {
+    this.layers.curtain.classList.toggle('show', on);
   }
 
   clearScreen() {
@@ -545,7 +549,8 @@ export class UI {
   }
 
   update(dt) {
-    if (!this.updateDialog(dt)) this.updateMenu(dt);
+    const busy = this.layers.curtain.classList.contains('show');
+    if (!busy && !this.updateDialog(dt)) this.updateMenu(dt);
     this.updateHUD();
     this.updateFps();
   }

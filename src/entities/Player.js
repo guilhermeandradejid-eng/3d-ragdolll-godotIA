@@ -27,9 +27,43 @@ const HALF_HEIGHT = 0.3;
 const RADIUS = 0.38;
 export const PLAYER_CENTER = HALF_HEIGHT + RADIUS; // altura do centro da cápsula acima dos pés
 
+function makeMarker(slot, color) {
+  const c = document.createElement('canvas');
+  c.width = 96;
+  c.height = 72;
+  const g = c.getContext('2d');
+  g.fillStyle = color;
+  g.strokeStyle = 'rgba(20,10,40,0.85)';
+  g.lineWidth = 6;
+  g.beginPath();
+  g.roundRect(6, 4, 84, 44, 16);
+  g.fill();
+  g.stroke();
+  g.beginPath();
+  g.moveTo(36, 46);
+  g.lineTo(48, 66);
+  g.lineTo(60, 46);
+  g.closePath();
+  g.fill();
+  g.fillStyle = '#1a1030';
+  g.font = 'bold 30px Fredoka, sans-serif';
+  g.textAlign = 'center';
+  g.textBaseline = 'middle';
+  g.fillText('J' + (slot + 1), 48, 27);
+  const tex = new THREE.CanvasTexture(c);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  const mat = new THREE.SpriteMaterial({ map: tex, depthTest: false, transparent: true, opacity: 0.9 });
+  const sp = new THREE.Sprite(mat);
+  sp.scale.set(0.62, 0.465, 1);
+  sp.renderOrder = 40;
+  return sp;
+}
+
 const _v = new THREE.Vector3();
 const _v2 = new THREE.Vector3();
 const _wish = new THREE.Vector3();
+const _hv = new THREE.Vector3();
+const _tgt = new THREE.Vector3();
 const _desired = { x: 0, y: 0, z: 0 };
 const _mv = new THREE.Vector3();
 
@@ -100,13 +134,18 @@ export class Player {
     this.kcc = kcc;
 
     // luz própria (vaga-lume!)
-    this.light = new THREE.PointLight(this.rig.def.glow, 0, 7, 2);
+    this.light = new THREE.PointLight(this.rig.def.glow, 0, 9, 1.6);
     this.light.position.y = 1.0;
     this.object.add(this.light);
 
     // sombra "blob" (ajuda a leitura de profundidade, como em Mario 64/Odyssey)
     this.blob = world.makeBlobShadow();
     world.scene.add(this.blob);
+
+    // marcador "J1..J4" acima da cabeça (visível através do cenário)
+    this.marker = makeMarker(slot, this.def.color);
+    this.marker.position.y = 2.25;
+    this.object.add(this.marker);
   }
 
   get input() {
@@ -202,9 +241,9 @@ export class Player {
     }
 
     // ---- aceleração horizontal
-    const hv = _v.set(this.velocity.x, 0, this.velocity.z);
+    const hv = _hv.set(this.velocity.x, 0, this.velocity.z);
     let maxSpeed = this.stats.speed;
-    let target = _v2.copy(_wish).multiplyScalar(maxSpeed);
+    let target = _tgt.copy(_wish).multiplyScalar(maxSpeed);
     if (this.action === 'roll') {
       const f = Math.sin(this.facing), c = Math.cos(this.facing);
       target.set(f, 0, c).multiplyScalar(ROLL_SPEED * (1 - this.actionT / ROLL_TIME * 0.35));
@@ -402,15 +441,12 @@ export class Player {
     this.updateVisual(dt);
   }
 
+  // O controlador do Rapier já leva o personagem junto com a velocidade do corpo cinemático
+  // (translação e rotação). Aqui só giramos a orientação junto com plataformas giratórias.
   applyPlatformCarry() {
     const gi = this.groundInfo;
-    if (!this.grounded || !gi || !gi.platform || !gi.platform.delta) return;
-    const p = gi.platform;
-    const c = this.collider.translation();
-    _v.set(c.x, c.y - PLAYER_CENTER, c.z).applyMatrix4(p.delta);
-    this.collider.setTranslation({ x: _v.x, y: _v.y + PLAYER_CENTER, z: _v.z });
-    this.facing += p.deltaYaw || 0;
-    this.position.copy(_v);
+    if (!this.grounded || !gi || !gi.platform) return;
+    this.facing += gi.platform.deltaYaw || 0;
   }
 
   doJump(fromRoll) {
@@ -582,6 +618,9 @@ export class Player {
     // piscar durante invulnerabilidade
     if (this.invuln > 0 && this.action !== 'bubble') o.visible = Math.floor(this.invuln * 14) % 2 === 0;
     else o.visible = true;
+    // marcador acompanha a cambalhota/escala sem girar junto
+    this.marker.position.y = this.action === 'bubble' ? 2.6 : 2.25 + Math.sin(this.rig.t * 3) * 0.05;
+    this.marker.visible = this.world.players.length > 1;
 
     // luz própria
     const night = this.world.env.playerLight ?? 0.4;
@@ -620,5 +659,7 @@ export class Player {
         o.material.dispose();
       }
     });
+    this.marker.material.map.dispose();
+    this.marker.material.dispose();
   }
 }

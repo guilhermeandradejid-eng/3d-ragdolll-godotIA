@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg-candeia" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d1238"/><stop offset="1" stop-color="#0b0718"/></linearGradient>
+    <radialGradient id="glow-candeia" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffcf7a" stop-opacity=".35"/><stop offset="1" stop-color="#ffcf7a" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="700" rx="28" fill="url(#bg-candeia)"/>
+  <circle cx="0" cy="0" r="0.6" fill="#fff" opacity="0.15"/><circle cx="283" cy="157" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="566" cy="314" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="849" cy="471" r="0.6" fill="#fff" opacity="0.39"/><circle cx="1132" cy="628" r="1.2" fill="#fff" opacity="0.15"/><circle cx="215" cy="85" r="1.7999999999999998" fill="#fff" opacity="0.22999999999999998"/><circle cx="498" cy="242" r="0.6" fill="#fff" opacity="0.31"/><circle cx="781" cy="399" r="1.2" fill="#fff" opacity="0.39"/><circle cx="1064" cy="556" r="1.7999999999999998" fill="#fff" opacity="0.15"/><circle cx="147" cy="13" r="0.6" fill="#fff" opacity="0.22999999999999998"/><circle cx="430" cy="170" r="1.2" fill="#fff" opacity="0.31"/><circle cx="713" cy="327" r="1.7999999999999998" fill="#fff" opacity="0.39"/><circle cx="996" cy="484" r="0.6" fill="#fff" opacity="0.15"/><circle cx="79" cy="641" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="362" cy="98" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="645" cy="255" r="0.6" fill="#fff" opacity="0.39"/><circle cx="928" cy="412" r="1.2" fill="#fff" opacity="0.15"/><circle cx="11" cy="569" r="1.7999999999999998" fill="#fff" opacity="0.22999999999999998"/><circle cx="294" cy="26" r="0.6" fill="#fff" opacity="0.31"/><circle cx="577" cy="183" r="1.2" fill="#fff" opacity="0.39"/><circle cx="860" cy="340" r="1.7999999999999998" fill="#fff" opacity="0.15"/><circle cx="1143" cy="497" r="0.6" fill="#fff" opacity="0.22999999999999998"/><circle cx="226" cy="654" r="1.2" fill="#fff" opacity="0.31"/><circle cx="509" cy="111" r="1.7999999999999998" fill="#fff" opacity="0.39"/><circle cx="792" cy="268" r="0.6" fill="#fff" opacity="0.15"/><circle cx="1075" cy="425" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="158" cy="582" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="441" cy="39" r="0.6" fill="#fff" opacity="0.39"/><circle cx="724" cy="196" r="1.2" fill="#fff" opacity="0.15"/><circle cx="1007" cy="353" r="1.7999999999999998" fill="#fff" opacity="0.22999999999999998"/><circle cx="90" cy="510" r="0.6" fill="#fff" opacity="0.31"/><circle cx="373" cy="667" r="1.2" fill="#fff" opacity="0.39"/><circle cx="656" cy="124" r="1.7999999999999998" fill="#fff" opacity="0.15"/><circle cx="939" cy="281" r="0.6" fill="#fff" opacity="0.22999999999999998"/><circle cx="22" cy="438" r="1.2" fill="#fff" opacity="0.31"/><circle cx="305" cy="595" r="1.7999999999999998" fill="#fff" opacity="0.39"/><circle cx="588" cy="52" r="0.6" fill="#fff" opacity="0.15"/><circle cx="871" cy="209" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="1154" cy="366" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="237" cy="523" r="0.6" fill="#fff" opacity="0.39"/>
+  <circle cx="270" cy="330" r="260" fill="url(#glow-candeia)"/>
+  <svg x="40" y="90" width="460" height="460" viewBox="0 0 200 200" ><defs><radialGradient id="cd-aura" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffd27a" stop-opacity=".5"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>
+     <radialGradient id="cd-face" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffe7c2"/><stop offset="1" stop-color="#e8a86a"/></radialGradient>
+     <linearGradient id="cd-shawl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a4a8a"/><stop offset="1" stop-color="#4a2a5a"/></linearGradient></defs>
+    <circle class="aura" cx="100" cy="112" r="92" fill="url(#cd-aura)"/>
+    <ellipse cx="62" cy="80" rx="30" ry="16" fill="#cfe8ff" opacity=".7" transform="rotate(-28 62 80)"/>
+    <ellipse cx="138" cy="80" rx="30" ry="16" fill="#cfe8ff" opacity=".7" transform="rotate(28 138 80)"/>
+    <path d="M100 176 Q48 176 44 136 Q44 100 100 96 Q156 100 156 136 Q152 176 100 176 Z" fill="url(#cd-shawl)"/>
+    <path d="M60 118 Q100 150 140 118 L146 140 Q100 176 54 140 Z" fill="#b8574a" opacity=".85"/>
+    <g fill="#e0b25a"><circle cx="72" cy="138" r="3"/><circle cx="100" cy="150" r="3"/><circle cx="128" cy="138" r="3"/></g>
+    <circle cx="100" cy="78" r="38" fill="url(#cd-face)"/>
+    <circle cx="100" cy="36" r="16" fill="#f4f1ec"/><circle cx="86" cy="44" r="12" fill="#f4f1ec"/><circle cx="114" cy="44" r="12" fill="#f4f1ec"/>
+    <path d="M82 32 Q76 14 66 12" stroke="#5a3a2a" stroke-width="3" fill="none"/><circle cx="65" cy="11" r="5" fill="#ffd27a"/>
+    <path d="M118 32 Q124 14 134 12" stroke="#5a3a2a" stroke-width="3" fill="none"/><circle cx="135" cy="11" r="5" fill="#ffd27a"/>
+    <circle cx="84" cy="80" r="12" fill="none" stroke="#6b4a2a" stroke-width="3"/>
+    <circle cx="116" cy="80" r="12" fill="none" stroke="#6b4a2a" stroke-width="3"/>
+    <path d="M96 80 L104 80" stroke="#6b4a2a" stroke-width="3"/>
+    <path d="M78 81 Q84 76 90 81" stroke="#3a2a20" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M110 81 Q116 76 122 81" stroke="#3a2a20" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <ellipse cx="72" cy="94" rx="7" ry="4.5" fill="#ff8f8f" opacity=".5"/><ellipse cx="128" cy="94" rx="7" ry="4.5" fill="#ff8f8f" opacity=".5"/>
+    <path d="M90 98 Q100 106 110 98" stroke="#3a2a20" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <g transform="translate(150 132)">
+      <circle cx="0" cy="0" r="26" fill="#ffd27a" opacity=".3"/>
+      <path d="M-16 6 Q0 18 16 6 L12 -2 L-12 -2 Z" fill="#b8804a"/>
+      <path d="M12 0 Q24 -2 26 -10" stroke="#b8804a" stroke-width="4" fill="none"/>
+      <path d="M0 -22 Q8 -12 5 -5 Q3 -1 0 -1 Q-3 -1 -5 -5 Q-8 -12 0 -22 Z" fill="#ffb347"/>
+      <path d="M0 -14 Q3 -9 2 -6 Q1 -4 0 -4 Q-1 -4 -2 -6 Q-3 -9 0 -14 Z" fill="#fff3c0"/>
+    </g>
+    <circle cx="136" cy="140" r="10" fill="url(#cd-face)"/></svg>
+  <rect x="40" y="572" width="96" height="96" rx="14" fill="#efe7f8"/>
+  <svg x="48" y="580" width="80" height="80" viewBox="0 0 200 200" ><defs></defs>
+    
+    <ellipse cx="62" cy="80" rx="30" ry="16" fill="#1b1430"  transform="rotate(-28 62 80)"/>
+    <ellipse cx="138" cy="80" rx="30" ry="16" fill="#1b1430"  transform="rotate(28 138 80)"/>
+    <path d="M100 176 Q48 176 44 136 Q44 100 100 96 Q156 100 156 136 Q152 176 100 176 Z" fill="#1b1430"/>
+    <path d="M60 118 Q100 150 140 118 L146 140 Q100 176 54 140 Z" fill="#1b1430" />
+    <g fill="#1b1430"><circle cx="72" cy="138" r="3"/><circle cx="100" cy="150" r="3"/><circle cx="128" cy="138" r="3"/></g>
+    <circle cx="100" cy="78" r="38" fill="#1b1430"/>
+    <circle cx="100" cy="36" r="16" fill="#1b1430"/><circle cx="86" cy="44" r="12" fill="#1b1430"/><circle cx="114" cy="44" r="12" fill="#1b1430"/>
+    <path d="M82 32 Q76 14 66 12" stroke="#1b1430" stroke-width="3" fill="none"/><circle cx="65" cy="11" r="5" fill="#1b1430"/>
+    <path d="M118 32 Q124 14 134 12" stroke="#1b1430" stroke-width="3" fill="none"/><circle cx="135" cy="11" r="5" fill="#1b1430"/>
+    <circle cx="84" cy="80" r="12" fill="none" stroke="#1b1430" stroke-width="3"/>
+    <circle cx="116" cy="80" r="12" fill="none" stroke="#1b1430" stroke-width="3"/>
+    <path d="M96 80 L104 80" stroke="#1b1430" stroke-width="3"/>
+    <path d="M78 81 Q84 76 90 81" stroke="#1b1430" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M110 81 Q116 76 122 81" stroke="#1b1430" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <ellipse cx="72" cy="94" rx="7" ry="4.5" fill="#1b1430" /><ellipse cx="128" cy="94" rx="7" ry="4.5" fill="#1b1430" />
+    <path d="M90 98 Q100 106 110 98" stroke="#1b1430" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <g transform="translate(150 132)">
+      <circle cx="0" cy="0" r="26" fill="#1b1430" />
+      <path d="M-16 6 Q0 18 16 6 L12 -2 L-12 -2 Z" fill="#1b1430"/>
+      <path d="M12 0 Q24 -2 26 -10" stroke="#1b1430" stroke-width="4" fill="none"/>
+      <path d="M0 -22 Q8 -12 5 -5 Q3 -1 0 -1 Q-3 -1 -5 -5 Q-8 -12 0 -22 Z" fill="#1b1430"/>
+      <path d="M0 -14 Q3 -9 2 -6 Q1 -4 0 -4 Q-1 -4 -2 -6 Q-3 -9 0 -14 Z" fill="#1b1430"/>
+    </g>
+    <circle cx="136" cy="140" r="10" fill="#1b1430"/></svg>
+  <text x="150" y="610" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="14" fill="#bfb3d6">Teste de silhueta:</text>
+  <text x="150" y="630" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="14" fill="#bfb3d6">a forma precisa ser reconhecível</text>
+  <text x="150" y="650" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="14" fill="#bfb3d6">mesmo toda preenchida de preto.</text>
+  <text x="560" y="92" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="54" font-weight="bold" fill="#fff8ec">Vó Candeia</text>
+  <text x="560" y="126" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="22" font-weight="bold" fill="#ffcf7a">A Guardiã do Grande Farol</text>
+  <text x="560" y="156" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="16" fill="#bfb3d6">Mentora · Narradora · “Juntos, iluminam o céu inteiro.”</text>
+  <line x1="560" y1="172" x2="1150" y2="172" stroke="#ffffff22"/>
+  <text x="560" y="200" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#ffcf7a" letter-spacing="1.5">PERSONALIDADE</text>
+  <text x="560" y="224" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="17" fill="#f3ecff"><tspan x="560" dy="0">Sábia, doce e firme. Criou os quatro aprendizes e acende o</tspan><tspan x="560" dy="23">Grande Farol há mais noites do que se pode contar.</tspan></text>
+  <text x="560" y="302" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#ffcf7a" letter-spacing="1.5">HABILIDADE</text>
+  <text x="560" y="326" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="17" fill="#f3ecff"><tspan x="560" dy="0">Guia os heróis pelo rádio de luz da sua candeia (a</tspan><tspan x="560" dy="23">lamparina de óleo que dá nome a ela).</tspan></text>
+  <text x="560" y="404" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#ffcf7a" letter-spacing="1.5">DESIGN</text>
+  <text x="560" y="428" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="17" fill="#f3ecff"><tspan x="560" dy="0">Vaga-lume idosa: xale de lã, óculos redondos, coque</tspan><tspan x="560" dy="23">branco, antenas com pontas acesas e a candeia sempre na</tspan><tspan x="560" dy="23">mão.</tspan></text>
+  
+  <text x="900" y="530" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#ffcf7a" letter-spacing="1.5">PALETA</text>
+  <g transform="translate(900 545)"><rect width="80" height="34" rx="8" fill="#ffcf7a" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#ffcf7a</text></g><g transform="translate(992 545)"><rect width="80" height="34" rx="8" fill="#7a4a8a" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#7a4a8a</text></g><g transform="translate(1084 545)"><rect width="80" height="34" rx="8" fill="#b8574a" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#b8574a</text></g><g transform="translate(900 607)"><rect width="80" height="34" rx="8" fill="#e8a86a" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#e8a86a</text></g><g transform="translate(992 607)"><rect width="80" height="34" rx="8" fill="#f4f1ec" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#f4f1ec</text></g>
+  <text x="40" y="52" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="16" fill="#8f82ad" letter-spacing="2">VAGA-LUMES: O ÚLTIMO FAROL · FICHA DE PERSONAGEM</text>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg-zuca" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d1238"/><stop offset="1" stop-color="#0b0718"/></linearGradient>
+    <radialGradient id="glow-zuca" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ff4fa3" stop-opacity=".35"/><stop offset="1" stop-color="#ff4fa3" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="700" rx="28" fill="url(#bg-zuca)"/>
+  <circle cx="0" cy="0" r="0.6" fill="#fff" opacity="0.15"/><circle cx="283" cy="157" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="566" cy="314" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="849" cy="471" r="0.6" fill="#fff" opacity="0.39"/><circle cx="1132" cy="628" r="1.2" fill="#fff" opacity="0.15"/><circle cx="215" cy="85" r="1.7999999999999998" fill="#fff" opacity="0.22999999999999998"/><circle cx="498" cy="242" r="0.6" fill="#fff" opacity="0.31"/><circle cx="781" cy="399" r="1.2" fill="#fff" opacity="0.39"/><circle cx="1064" cy="556" r="1.7999999999999998" fill="#fff" opacity="0.15"/><circle cx="147" cy="13" r="0.6" fill="#fff" opacity="0.22999999999999998"/><circle cx="430" cy="170" r="1.2" fill="#fff" opacity="0.31"/><circle cx="713" cy="327" r="1.7999999999999998" fill="#fff" opacity="0.39"/><circle cx="996" cy="484" r="0.6" fill="#fff" opacity="0.15"/><circle cx="79" cy="641" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="362" cy="98" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="645" cy="255" r="0.6" fill="#fff" opacity="0.39"/><circle cx="928" cy="412" r="1.2" fill="#fff" opacity="0.15"/><circle cx="11" cy="569" r="1.7999999999999998" fill="#fff" opacity="0.22999999999999998"/><circle cx="294" cy="26" r="0.6" fill="#fff" opacity="0.31"/><circle cx="577" cy="183" r="1.2" fill="#fff" opacity="0.39"/><circle cx="860" cy="340" r="1.7999999999999998" fill="#fff" opacity="0.15"/><circle cx="1143" cy="497" r="0.6" fill="#fff" opacity="0.22999999999999998"/><circle cx="226" cy="654" r="1.2" fill="#fff" opacity="0.31"/><circle cx="509" cy="111" r="1.7999999999999998" fill="#fff" opacity="0.39"/><circle cx="792" cy="268" r="0.6" fill="#fff" opacity="0.15"/><circle cx="1075" cy="425" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="158" cy="582" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="441" cy="39" r="0.6" fill="#fff" opacity="0.39"/><circle cx="724" cy="196" r="1.2" fill="#fff" opacity="0.15"/><circle cx="1007" cy="353" r="1.7999999999999998" fill="#fff" opacity="0.22999999999999998"/><circle cx="90" cy="510" r="0.6" fill="#fff" opacity="0.31"/><circle cx="373" cy="667" r="1.2" fill="#fff" opacity="0.39"/><circle cx="656" cy="124" r="1.7999999999999998" fill="#fff" opacity="0.15"/><circle cx="939" cy="281" r="0.6" fill="#fff" opacity="0.22999999999999998"/><circle cx="22" cy="438" r="1.2" fill="#fff" opacity="0.31"/><circle cx="305" cy="595" r="1.7999999999999998" fill="#fff" opacity="0.39"/><circle cx="588" cy="52" r="0.6" fill="#fff" opacity="0.15"/><circle cx="871" cy="209" r="1.2" fill="#fff" opacity="0.22999999999999998"/><circle cx="1154" cy="366" r="1.7999999999999998" fill="#fff" opacity="0.31"/><circle cx="237" cy="523" r="0.6" fill="#fff" opacity="0.39"/>
+  <circle cx="270" cy="330" r="260" fill="url(#glow-zuca)"/>
+  <svg x="40" y="90" width="460" height="460" viewBox="0 0 200 200" ><defs><radialGradient id="zc-aura" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ff9ad0" stop-opacity=".5"/><stop offset="1" stop-color="#ff9ad0" stop-opacity="0"/></radialGradient>
+     <linearGradient id="zc-pink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8cc4"/><stop offset=".5" stop-color="#ff4fa3"/><stop offset="1" stop-color="#b8286e"/></linearGradient>
+     <linearGradient id="zc-teal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8ff2ea"/><stop offset=".5" stop-color="#2fd0c4"/><stop offset="1" stop-color="#15877f"/></linearGradient>
+     <radialGradient id="zc-bulb" cx="40%" cy="40%" r="60%"><stop offset="0" stop-color="#fffbe0"/><stop offset="1" stop-color="#ffc21a"/></radialGradient></defs>
+    <circle class="aura" cx="100" cy="112" r="92" fill="url(#zc-aura)"/>
+    <ellipse class="aura" cx="100" cy="188" rx="50" ry="7" fill="#000" opacity=".18"/>
+    <rect x="70" y="166" width="24" height="18" rx="6" fill="url(#zc-pink)"/>
+    <rect x="106" y="166" width="24" height="18" rx="6" fill="url(#zc-pink)"/>
+    <path d="M52 128 Q34 136 34 156" stroke="url(#zc-pink)" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <circle cx="34" cy="158" r="10" fill="#2fd0c4"/>
+    <path d="M148 128 Q168 120 172 100" stroke="url(#zc-pink)" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <circle cx="172" cy="96" r="10" fill="#2fd0c4"/>
+    <circle cx="52" cy="126" r="8" fill="#d9814a"/><circle cx="148" cy="126" r="8" fill="#d9814a"/>
+    <rect x="52" y="112" width="96" height="62" rx="18" fill="url(#zc-pink)"/>
+    <rect x="74" y="130" width="52" height="28" rx="6" fill="#2fd0c4"/>
+    <circle cx="90" cy="144" r="8" fill="#ffe45c"/><circle cx="112" cy="144" r="5" fill="#ff5a8a"/>
+    <circle cx="60" cy="120" r="3" fill="#d9814a"/><circle cx="140" cy="120" r="3" fill="#d9814a"/>
+    <circle cx="60" cy="166" r="3" fill="#d9814a"/><circle cx="140" cy="166" r="3" fill="#d9814a"/>
+    <g stroke="#d9814a" stroke-width="5" fill="none"><circle cx="164" cy="146" r="9"/><path d="M148 146 L156 146"/></g>
+    <rect x="46" y="46" width="108" height="72" rx="22" fill="url(#zc-teal)"/>
+    <rect x="36" y="70" width="12" height="22" rx="4" fill="#d9814a"/><rect x="152" y="70" width="12" height="22" rx="4" fill="#d9814a"/>
+    <rect x="58" y="60" width="84" height="46" rx="14" fill="#0d0a1c"/>
+    <rect x="62" y="62" width="76" height="8" rx="4" fill="#fff" opacity=".08"/>
+    <rect x="76" y="70" width="12" height="20" rx="5" fill="#6ff7ff"/>
+    <rect x="112" y="70" width="12" height="20" rx="5" fill="#6ff7ff"/>
+    <path d="M90 96 Q100 104 110 96" stroke="#6ff7ff" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M118 46 L124 22" stroke="#d9814a" stroke-width="4"/>
+    <circle cx="125" cy="18" r="8" fill="url(#zc-bulb)"/>
+    <circle cx="125" cy="18" r="16" fill="#ffe45c" opacity=".25"/></svg>
+  <rect x="40" y="572" width="96" height="96" rx="14" fill="#efe7f8"/>
+  <svg x="48" y="580" width="80" height="80" viewBox="0 0 200 200" ><defs></defs>
+    
+    
+    <rect x="70" y="166" width="24" height="18" rx="6" fill="#1b1430"/>
+    <rect x="106" y="166" width="24" height="18" rx="6" fill="#1b1430"/>
+    <path d="M52 128 Q34 136 34 156" stroke="#1b1430" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <circle cx="34" cy="158" r="10" fill="#1b1430"/>
+    <path d="M148 128 Q168 120 172 100" stroke="#1b1430" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <circle cx="172" cy="96" r="10" fill="#1b1430"/>
+    <circle cx="52" cy="126" r="8" fill="#1b1430"/><circle cx="148" cy="126" r="8" fill="#1b1430"/>
+    <rect x="52" y="112" width="96" height="62" rx="18" fill="#1b1430"/>
+    <rect x="74" y="130" width="52" height="28" rx="6" fill="#1b1430"/>
+    <circle cx="90" cy="144" r="8" fill="#1b1430"/><circle cx="112" cy="144" r="5" fill="#1b1430"/>
+    <circle cx="60" cy="120" r="3" fill="#1b1430"/><circle cx="140" cy="120" r="3" fill="#1b1430"/>
+    <circle cx="60" cy="166" r="3" fill="#1b1430"/><circle cx="140" cy="166" r="3" fill="#1b1430"/>
+    <g stroke="#1b1430" stroke-width="5" fill="none"><circle cx="164" cy="146" r="9"/><path d="M148 146 L156 146"/></g>
+    <rect x="46" y="46" width="108" height="72" rx="22" fill="#1b1430"/>
+    <rect x="36" y="70" width="12" height="22" rx="4" fill="#1b1430"/><rect x="152" y="70" width="12" height="22" rx="4" fill="#1b1430"/>
+    <rect x="58" y="60" width="84" height="46" rx="14" fill="#1b1430"/>
+    <rect x="62" y="62" width="76" height="8" rx="4" fill="#1b1430" />
+    <rect x="76" y="70" width="12" height="20" rx="5" fill="#1b1430"/>
+    <rect x="112" y="70" width="12" height="20" rx="5" fill="#1b1430"/>
+    <path d="M90 96 Q100 104 110 96" stroke="#1b1430" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M118 46 L124 22" stroke="#1b1430" stroke-width="4"/>
+    <circle cx="125" cy="18" r="8" fill="#1b1430"/>
+    <circle cx="125" cy="18" r="16" fill="#1b1430" /></svg>
+  <text x="150" y="610" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="14" fill="#bfb3d6">Teste de silhueta:</text>
+  <text x="150" y="630" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="14" fill="#bfb3d6">a forma precisa ser reconhecível</text>
+  <text x="150" y="650" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="14" fill="#bfb3d6">mesmo toda preenchida de preto.</text>
+  <text x="560" y="92" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="54" font-weight="bold" fill="#fff8ec">Zuca</text>
+  <text x="560" y="126" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="22" font-weight="bold" fill="#ff4fa3">A Inventora de Corda</text>
+  <text x="560" y="156" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="16" fill="#bfb3d6">Heroína · Jogável · “Calculando… 97% de chance de dar certo!”</text>
+  <line x1="560" y1="172" x2="1150" y2="172" stroke="#ffffff22"/>
+  <text x="560" y="200" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#ff4fa3" letter-spacing="1.5">PERSONALIDADE</text>
+  <text x="560" y="224" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="17" fill="#f3ecff"><tspan x="560" dy="0">Hiperativa, fala rápido e calcula probabilidades para</tspan><tspan x="560" dy="23">tudo. Constrói geringonças com peças de relógio.</tspan></text>
+  <text x="560" y="302" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#ff4fa3" letter-spacing="1.5">HABILIDADE</text>
+  <text x="560" y="326" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="17" fill="#f3ecff"><tspan x="560" dy="0">A mais rápida da turma — mas escorrega nas curvas (pouca</tspan><tspan x="560" dy="23">tração).</tspan></text>
+  <text x="560" y="404" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#ff4fa3" letter-spacing="1.5">DESIGN</text>
+  <text x="560" y="428" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="17" fill="#f3ecff"><tspan x="560" dy="0">Robô de lata dos anos 50: corpo rosa metálico com</tspan><tspan x="560" dy="23">clearcoat, cabeça-tela com olhos de LED, antena com</tspan><tspan x="560" dy="23">lâmpada e chave de corda que gira mais rápido quando</tspan><tspan x="560" dy="23">corre.</tspan></text>
+  <text x="560" y="560" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" fill="#d9cfe8">Velocidade</text><rect x="680" y="547" width="40" height="14" rx="4" fill="#ff4fa3"/><rect x="726" y="547" width="40" height="14" rx="4" fill="#ff4fa3"/><rect x="772" y="547" width="40" height="14" rx="4" fill="#ff4fa3"/><text x="560" y="586" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" fill="#d9cfe8">Pulo</text><rect x="680" y="573" width="40" height="14" rx="4" fill="#ff4fa3"/><rect x="726" y="573" width="40" height="14" rx="4" fill="#ff4fa3"/><rect x="772" y="573" width="40" height="14" rx="4" fill="#ff4fa3"/><text x="560" y="612" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" fill="#d9cfe8">Peso</text><rect x="680" y="599" width="40" height="14" rx="4" fill="#ff4fa3"/><rect x="726" y="599" width="40" height="14" rx="4" fill="#ffffff22"/><rect x="772" y="599" width="40" height="14" rx="4" fill="#ffffff22"/><text x="560" y="638" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" fill="#d9cfe8">Tração</text><rect x="680" y="625" width="40" height="14" rx="4" fill="#ff4fa3"/><rect x="726" y="625" width="40" height="14" rx="4" fill="#ffffff22"/><rect x="772" y="625" width="40" height="14" rx="4" fill="#ffffff22"/>
+  <text x="900" y="530" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#ff4fa3" letter-spacing="1.5">PALETA</text>
+  <g transform="translate(900 545)"><rect width="80" height="34" rx="8" fill="#ff4fa3" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#ff4fa3</text></g><g transform="translate(992 545)"><rect width="80" height="34" rx="8" fill="#2fd0c4" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#2fd0c4</text></g><g transform="translate(1084 545)"><rect width="80" height="34" rx="8" fill="#d9814a" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#d9814a</text></g><g transform="translate(900 607)"><rect width="80" height="34" rx="8" fill="#ffe45c" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#ffe45c</text></g><g transform="translate(992 607)"><rect width="80" height="34" rx="8" fill="#0d0a1c" stroke="#ffffff33"/><text x="40" y="50" text-anchor="middle" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="12" fill="#d9cfe8">#0d0a1c</text></g>
+  <text x="40" y="52" font-family="'Trebuchet MS', Verdana, 'DejaVu Sans', sans-serif" font-size="16" fill="#8f82ad" letter-spacing="2">VAGA-LUMES: O ÚLTIMO FAROL · FICHA DE PERSONAGEM</text>
+</svg>

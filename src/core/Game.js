@@ -77,6 +77,29 @@ export class Game {
     if (params.get('look')) this.debug.look = params.get('look').split(',').map(Number);
   }
 
+  // ------------------------------------------------------------------ transições
+  // Cortina escura enquanto o novo mundo é construído e seus shaders são pré-compilados.
+  transitionTo(fn) {
+    if (this.state === 'transition') return;
+    this.state = 'transition';
+    this.ui.curtain(true);
+    setTimeout(async () => {
+      try {
+        fn();
+        const w = this.world;
+        const r = this.renderer.renderer;
+        if (w) {
+          if (r.extensions.has('KHR_parallel_shader_compile')) {
+            await Promise.race([r.compileAsync(w.scene, w.shared.camera), new Promise((res) => setTimeout(res, 2500))]);
+          } else r.compile(w.scene, w.shared.camera);
+        }
+      } catch (err) {
+        console.error(err);
+      }
+      requestAnimationFrame(() => this.ui.curtain(false));
+    }, 320);
+  }
+
   // ------------------------------------------------------------------ mundos
   setWorld(def, opts) {
     if (this.world) this.world.dispose();
@@ -104,7 +127,7 @@ export class Game {
   goMenu() {
     this.state = 'menu';
     this.ui.showMainMenu([
-      { label: this.save.data.unlocked > 1 ? 'Continuar aventura' : 'Nova aventura', action: () => this.goLobby() },
+      { label: this.save.data.unlocked > 1 ? 'Continuar aventura' : 'Nova aventura', action: () => this.transitionTo(() => this.goLobby()) },
       { label: 'Como jogar', action: () => this.ui.showHowTo(() => this.goMenu()) },
       { label: 'Opções', action: () => this.ui.showOptions(() => { this.ui.hideOverlay(); this.goMenu(); }) },
       { label: 'Créditos', action: () => this.ui.showCredits(CREDITS, () => this.goMenu()) },
@@ -116,7 +139,7 @@ export class Game {
   goLobby() {
     this.state = 'lobby';
     const w = this.setWorld(LOBBY_STAGE, { players: [] });
-    w.shared.setCinematic({ target: new THREE.Vector3(0, 0.1, 0), yaw: 0, pitch: 0.06, dist: 13, yawSpeed: 0, fov: 40, snap: true });
+    w.shared.setCinematic({ target: new THREE.Vector3(0, 1.1, 0), yaw: 0, pitch: 0.12, dist: 13, yawSpeed: 0, fov: 40, snap: true });
     w.grade.dofAmount = 0.9;
     w.grade.dofMode = 0;
     w.grade.dofFocus = 12.5;
@@ -165,8 +188,10 @@ export class Game {
           }
         } else if (d.pressed.back && !L.slots.some(Boolean)) {
           this.clearLobbyRigs();
-          this.goTitle();
-          this.goMenu();
+          this.transitionTo(() => {
+            this.goTitle();
+            this.goMenu();
+          });
           return;
         }
         continue;
@@ -228,8 +253,8 @@ export class Game {
     this.roster = L.slots.map((s, i) => (s ? { slot: i, deviceId: s.deviceId, charId: s.charId } : null)).filter(Boolean);
     this.clearLobbyRigs();
     this.audio.sfx('start');
-    if (this.save.data.unlocked > 1) this.goChapters();
-    else this.startLevel(0, true);
+    if (this.save.data.unlocked > 1) this.transitionTo(() => this.goChapters());
+    else this.transitionTo(() => this.startLevel(0, true));
   }
 
   goChapters() {
@@ -237,7 +262,7 @@ export class Game {
     const w = this.setWorld(LEVELS[0], { players: [] });
     w.shared.setCinematic({ target: new THREE.Vector3(0, 2, -60), yaw: 0.8, pitch: 0.3, dist: 70, yawSpeed: 0.02, fov: 42, snap: true });
     w.grade.dofAmount = 0.8;
-    this.ui.showChapters(LEVELS, this.save, (i) => this.startLevel(i, true), () => this.goLobby());
+    this.ui.showChapters(LEVELS, this.save, (i) => this.transitionTo(() => this.startLevel(i, true)), () => this.transitionTo(() => this.goLobby()));
   }
 
   // ------------------------------------------------------------------ capítulos
@@ -294,7 +319,7 @@ export class Game {
   afterResults() {
     const key = OUTRO_KEYS[this.levelIndex];
     const next = () => {
-      if (this.levelIndex + 1 < LEVELS.length) this.startLevel(this.levelIndex + 1, true);
+      if (this.levelIndex + 1 < LEVELS.length) this.transitionTo(() => this.startLevel(this.levelIndex + 1, true));
       else this.goEnding();
     };
     this.ui.clearScreen();
@@ -319,7 +344,7 @@ export class Game {
       this.state = 'credits';
       this.ui.showCredits(CREDITS, () => {
         this.ui.clearScreen();
-        this.goTitle();
+        this.transitionTo(() => this.goTitle());
       });
     });
   }
@@ -332,12 +357,12 @@ export class Game {
     const items = [
       { label: 'Continuar', action: () => this.resume() },
       { label: 'Voltar ao último lampião', action: () => { this.resume(); w.startTransition(w.players[0], () => w.respawnAll(), 0.8); } },
-      { label: 'Reiniciar capítulo', action: () => { this.ui.hideOverlay(); this.startLevel(this.levelIndex, false); } },
+      { label: 'Reiniciar capítulo', action: () => { this.ui.hideOverlay(); this.transitionTo(() => this.startLevel(this.levelIndex, false)); } },
       { label: 'Opções', action: () => this.ui.showOptions(() => this.pause(byDevice)) },
     ];
     const me = w.players.find((p) => p.deviceId === byDevice);
     if (me && w.players.length > 1) items.push({ label: `Sair da partida (${me.def.name})`, action: () => { this.dropPlayer(me); this.resume(); } });
-    items.push({ label: 'Sair para o título', action: () => { this.ui.hideOverlay(); this.goTitle(); } });
+    items.push({ label: 'Sair para o título', action: () => { this.ui.hideOverlay(); this.transitionTo(() => this.goTitle()); } });
     this.ui.showPause({ items, onBack: () => this.resume() });
   }
 
@@ -423,6 +448,7 @@ export class Game {
         break;
       }
       case 'paused':
+      case 'transition':
         break;
       default:
         w?.update(dt);

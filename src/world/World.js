@@ -271,6 +271,7 @@ export class World {
     this.players.forEach((p, i) => {
       const s = this.level.spawns[i % this.level.spawns.length] || { pos: new THREE.Vector3(i * 1.5, 2, 0), yaw: Math.PI };
       p.spawn(s.pos.clone(), s.yaw);
+      p.invuln = 0; // sem piscar no início do capítulo
     });
     for (const f of this.followCams) f.snap();
   }

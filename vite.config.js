@@ -6,6 +6,18 @@ export default defineConfig({
   server: { host: true },
   build: {
     target: 'es2022',
-    chunkSizeWarningLimit: 4096,
+    // o Rapier embute o WASM (~2 MB) no próprio módulo JS
+    chunkSizeWarningLimit: 4800,
+    rolldownOptions: {
+      output: {
+        // bibliotecas em arquivos separados: melhor cache entre versões do jogo
+        codeSplitting: {
+          groups: [
+            { name: 'rapier', test: /node_modules[\\/]@dimforge/ },
+            { name: 'three', test: /node_modules[\\/]three/ },
+          ],
+        },
+      },
+    },
   },
 });
