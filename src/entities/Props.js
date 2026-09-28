@@ -235,7 +235,7 @@ export class Lighthouse {
     // colisão: torre + base
     world.physics.cylinder(H / 2, 1.9 * scale, _v.set(pos.x, pos.y + (H / 2) * scale, pos.z), null, null, { type: 'prop', surface: 'stone' });
     world.physics.cylinder(0.4 * scale, 3.4 * scale, _v.set(pos.x, pos.y + 0.2 * scale, pos.z), null, null, { type: 'ground', surface: 'stone' });
-    this.triggerR = 4.4 * scale;
+    this.triggerR = 5.4 * scale;
   }
 
   update(dt) {

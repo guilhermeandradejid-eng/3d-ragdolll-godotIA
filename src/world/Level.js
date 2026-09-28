@@ -11,6 +11,7 @@ import { MovingPlatform, CrumblePlatform, BouncePad } from '../entities/Platform
 import { SparkField, LightSeed, HeartPickup } from '../entities/Collectibles.js';
 import { ENEMY_TYPES } from '../entities/Enemies.js';
 import { Checkpoint, Lighthouse, ShadowVeil, Crate, Sign, Pendulum, LightBridge, waterfallMaterial } from '../entities/Props.js';
+import { NoxBoss } from '../entities/Boss.js';
 import { rng, TAU } from '../core/math.js';
 
 export const V = (x, y, z) => new THREE.Vector3(x, y, z);
@@ -320,7 +321,7 @@ export class Level {
     }
     this.group.add(obj);
     const plat = new MovingPlatform(this.world, {
-      object: obj, colliders, path: (o.path || [o.pos]).map(toV), speed: o.speed, wait: o.wait, loop: o.loop,
+      object: obj, colliders, path: (o.path || [o.pos || (o.orbit && o.orbit.center) || [0, 0, 0]]).map(toV), speed: o.speed, wait: o.wait, loop: o.loop,
       rotateSpeed: o.rotateSpeed, yaw: o.yaw, phase: o.phase, bobAmp: o.bob ?? 0, bobFreq: o.bobFreq ?? 0.4, orbit: o.orbit && {
         center: toV(o.orbit.center), radius: o.orbit.radius, speed: o.orbit.speed, phase: o.orbit.phase,
       }, surface,
@@ -453,6 +454,10 @@ export class Level {
     const p = new Pendulum(this.world, V(x, y, z), o.length ?? 5, o.amp ?? 1.1, o.speed ?? 1.5, o.phase ?? 0, o.yaw ?? 0, this.mats);
     this.entities.push(p);
     return p;
+  }
+  boss(x, y, z) {
+    this.bossObj = new NoxBoss(this.world, V(x, y, z));
+    return this.bossObj;
   }
   lightBridge(a, b, width = 2.4, panels = 6) {
     const lb = new LightBridge(this.world, toV(a), toV(b), width, panels);
@@ -741,6 +746,7 @@ export class Level {
 
   dispose() {
     for (const e of [...this.entities, ...this.enemies, ...this.platforms, ...this.debris]) e.dispose?.();
+    this.bossObj?.dispose();
     this.world.scene.remove(this.group);
     this.group.traverse((o) => {
       if (o.isMesh || o.isInstancedMesh) o.geometry?.dispose();

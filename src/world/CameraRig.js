@@ -152,6 +152,14 @@ export class SharedCamera {
     avgVel.multiplyScalar(1 / list.length);
     let spread = 0;
     for (const p of list) spread = Math.max(spread, p.position.distanceTo(center));
+    // alvos extras (ex.: o chefe) puxam o enquadramento de leve
+    if (this.extraTargets) {
+      for (const t of this.extraTargets) {
+        _h.set(t.x, Math.min(t.y, center.y + 4), t.z);
+        center.lerp(_h, 0.3);
+        spread = Math.max(spread, _h.distanceTo(center) * 0.8);
+      }
+    }
 
     // referência vertical (não acompanha cada pulo)
     if (!this.initialized) this.groundRef = center.y;

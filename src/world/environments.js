@@ -90,8 +90,8 @@ export const ENVIRONMENTS = {
     grass: { base: '#2f7a35', tip: '#b5e86a' },
     sea: { top: '#fff4ea', shadow: '#d5aec6', y: -34, glow: 1 },
     grade: {
-      exposure: 1.05, saturation: 1.12, contrast: 1.05, tint: [1.03, 1.0, 0.97], bloomIntensity: 1.0, bloomThreshold: 1.05,
-      godStrength: 0.9, sunColor: '#ffd79c', vignette: 0.28, flareIntensity: 0.14, aoStrength: 0.8,
+      exposure: 0.95, saturation: 1.1, contrast: 1.08, tint: [1.02, 1.0, 0.98], bloomIntensity: 0.75, bloomThreshold: 1.2,
+      godStrength: 0.6, sunColor: '#ffd79c', vignette: 0.3, flareIntensity: 0.1, aoStrength: 0.8,
     },
     wind: [0.9, 0.35, 0.4],
     ambient: 'pollen',

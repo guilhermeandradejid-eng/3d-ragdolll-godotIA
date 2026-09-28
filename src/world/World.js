@@ -8,9 +8,9 @@ import { Lighting } from '../render/Lighting.js';
 import { Effects, SHAPE } from '../render/Particles.js';
 import { WU, setPlayerUniform } from '../render/WorldShading.js';
 import { defaultGrade } from '../render/PostFX.js';
-import { ENVIRONMENTS } from './environments.js';
+import { ENVIRONMENTS, lerpEnv } from './environments.js';
 import { Player, PLAYER_CENTER } from '../entities/Player.js';
-import { Debris } from '../entities/Props.js';
+import { Debris, beamMaterial } from '../entities/Props.js';
 import { clamp, damp, distXZ } from '../core/math.js';
 
 const _v = new THREE.Vector3();
@@ -95,12 +95,24 @@ export class World {
     if (levelDef.camera) Object.assign(this.shared, levelDef.camera);
 
     this.blobGeo = null;
-    this.boss = this.level.boss || null;
+    this.boss = this.level.bossObj || null;
     this.onReady?.();
   }
 
   // ------------------------------------------------------------------ ambiente
   applyEnvironment(env) {
+    this.applyEnvUniforms(env);
+    this.rebuildEnvMap(env);
+  }
+
+  rebuildEnvMap(env) {
+    this._envRT?.dispose();
+    this._envRT = this.sky.buildEnvironment(this.game.renderer.renderer);
+    this.scene.environment = this._envRT.texture;
+    this.scene.environmentIntensity = env.envIntensity;
+  }
+
+  applyEnvUniforms(env) {
     WU.uSunDir.value.copy(env.sunDir);
     WU.uSunColor.value.set(env.light.sunColor);
     WU.uFogColor.value.set(env.fog.color);
@@ -126,10 +138,81 @@ export class World {
       else if (k === 'sunColor') g.sunColor.set(gg.sunColor);
       else g[k] = gg[k];
     }
-    if (this.scene.environment) this._envRT?.dispose();
-    this._envRT = this.sky.buildEnvironment(this.game.renderer.renderer);
-    this.scene.environment = this._envRT.texture;
     this.scene.environmentIntensity = env.envIntensity;
+  }
+
+  // Transição suave de atmosfera (ex.: eclipse -> nascer do sol no final)
+  transitionEnv(toKey, dur = 5) {
+    this.envTransition = { from: this.env, to: { ...ENVIRONMENTS[toKey], id: toKey }, t: 0, dur };
+  }
+
+  updateEnvTransition(dt) {
+    const tr = this.envTransition;
+    if (!tr) return;
+    tr.t += dt;
+    const k = Math.min(1, tr.t / tr.dur);
+    const e = lerpEnv(tr.from, tr.to, k * k * (3 - 2 * k));
+    e.sky.eclipse = (tr.from.sky.eclipse ?? 0) * (1 - k);
+    e.sky.stars = (tr.from.sky.stars ?? 0) * (1 - k);
+    this.applyEnvUniforms(e);
+    if (k >= 1) {
+      this.env = tr.to;
+      this.envTransition = null;
+      this.rebuildEnvMap(this.env);
+    }
+  }
+
+  // ------------------------------------------------------------------ chefe
+  onPlayStart() {
+    if (this.boss) {
+      this.boss.awaken();
+      this.game.ui?.banner('Nox, a Mariposa do Eclipse', 'Faça-a mergulhar e acerte o núcleo!', '#c07aff');
+    }
+  }
+
+  onFlameReturned() {
+    const p = this.brazierPos || new THREE.Vector3(0, 3, 0);
+    const flameMat = new THREE.MeshBasicMaterial({ color: new THREE.Color('#ffd27a').multiplyScalar(8) });
+    const flame = new THREE.Mesh(new THREE.IcosahedronGeometry(1.2, 2), flameMat);
+    flame.position.copy(p);
+    this.scene.add(flame);
+    this.brazierFlame = flame;
+    const light = new THREE.PointLight('#ffd89a', 30, 50, 1.6);
+    light.position.copy(p).add(_v.set(0, 1, 0));
+    this.scene.add(light);
+    const beams = new THREE.Group();
+    beams.position.copy(p);
+    const beamG = new THREE.CylinderGeometry(0.8, 7, 60, 24, 1, true);
+    beamG.translate(0, 30, 0);
+    beamG.rotateZ(-Math.PI / 2 + 0.12);
+    const bm = beamMaterial('#ffe7b0', 0.7);
+    for (let i = 0; i < 3; i++) {
+      const b = new THREE.Mesh(beamG, bm);
+      b.rotation.y = (i / 3) * Math.PI * 2;
+      b.renderOrder = 30;
+      beams.add(b);
+    }
+    const up = new THREE.Mesh(new THREE.CylinderGeometry(1.5, 6, 80, 24, 1, true), bm);
+    up.position.y = 40;
+    beams.add(up);
+    this.scene.add(beams);
+    this.brazierBeams = beams;
+    this.effects.burst(p, '#ffe7b0', 120, 16, 1, 6);
+    this.effects.confetti(p, 120);
+    this.flash = 0.7;
+    this.shake(0.5);
+    this.audio('goal');
+    this.audio('lightBeam');
+    this.transitionEnv('sunrise', 5);
+    for (const pl of this.players) pl.celebrate = true;
+    this.game.ui?.banner('O Grande Farol reacendeu!', 'O sol vai nascer outra vez.', '#ffd27a');
+  }
+
+  onBossDefeated() {
+    this.state = 'goal';
+    this.stateT = 0;
+    this.results = this.collectResults();
+    this.game.onLevelComplete(this.results);
   }
 
   // ------------------------------------------------------------------ jogadores
@@ -576,6 +659,12 @@ export class World {
     }
     this.level.update(dt);
     this.boss?.update?.(dt);
+    this.updateEnvTransition(rawDt);
+    if (this.brazierBeams) {
+      this.brazierBeams.rotation.y += dt * 0.5;
+      this.brazierFlame.scale.setScalar(1 + Math.sin(this.time * 9) * 0.08);
+      if (Math.random() < dt * 30) this.effects.flame(this.brazierFlame.position, '#ffcf5a', 1.2);
+    }
     this.effects.update(dt);
     this.updateCoopRules(dt);
     this.updateAmbient(dt);
@@ -692,6 +781,8 @@ export class World {
   }
 
   updateCameras(dt) {
+    const b = this.boss;
+    this.shared.extraTargets = b && b.state !== 'dormant' && b.state !== 'defeated' ? [b.pos] : null;
     const dbg = this.game.debug;
     if (dbg?.dist) this.shared.minDist = this.shared.maxDist = dbg.dist;
     if (dbg?.pitch !== undefined) this.shared.defaultPitch = dbg.pitch;
