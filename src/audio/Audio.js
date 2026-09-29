@@ -55,10 +55,16 @@ export class AudioEngine {
     if (this.ctx.state === 'suspended') this.ctx.resume();
   }
 
+  // abaixa a música (pausa, diálogos importantes)
+  duck(on) {
+    this.ducked = on;
+    this.applyVolumes();
+  }
+
   applyVolumes() {
     if (!this.ctx) return;
     const t = this.ctx.currentTime;
-    this.musicBus.gain.setTargetAtTime(this.settings.musicVolume * 0.55, t, 0.1);
+    this.musicBus.gain.setTargetAtTime(this.settings.musicVolume * 0.55 * (this.ducked ? 0.35 : 1), t, 0.1);
     this.sfxBus.gain.setTargetAtTime(this.settings.sfxVolume * 0.9, t, 0.05);
   }
 
@@ -412,6 +418,12 @@ export class AudioEngine {
     const ctx = this.ctx;
     const tr = c.tr;
     const stepDur = 60 / tr.bpm / 4;
+    // aba oculta / travada: pula os passos atrasados em vez de tocá-los todos de uma vez
+    if (c.next < ctx.currentTime - 0.25) {
+      const skip = Math.ceil((ctx.currentTime - c.next) / stepDur);
+      c.step += skip;
+      c.next += skip * stepDur;
+    }
     while (c.next < ctx.currentTime + 0.15) {
       this.playStep(c, c.step, c.next, stepDur);
       c.step++;

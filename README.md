@@ -2,7 +2,7 @@
 
 **Plataforma 3D cooperativo local (couch co-op) para 1 a 4 jogadores**, feito com **three.js**, física **Rapier**, pipeline de pós-processamento e shaders próprios. Roda direto no navegador.
 
-![Quatro vaga-lumes nos Prados da Aurora](docs/screenshots/jogo.png)
+![Quatro vaga-lumes nos Prados da Aurora](docs/screenshots/jogo.jpg)
 
 > Quando Nox, a Mariposa do Eclipse, engole a Chama Primordial, o sol não nasce e as ilhas do céu começam a afundar. Quatro pequenos vaga-lumes precisam reacender os faróis do Arquipélago de Aurora — porque *juntos, brilhamos mais*.
 
@@ -52,11 +52,11 @@ npm run preview    # serve o build localmente
 
 | | |
 |---|---|
-| ![Tela de título](docs/screenshots/titulo.png) | ![Seleção de personagens](docs/screenshots/selecao.png) |
-| ![Desfiladeiro Estelar](docs/screenshots/desfiladeiro.png) | ![Cidadela do Eclipse](docs/screenshots/cidadela.png) |
-| ![Chefe: Nox](docs/screenshots/chefe.png) | ![Tela dividida](docs/screenshots/tela-dividida.png) |
+| ![Tela de título](docs/screenshots/titulo.jpg) | ![Seleção de personagens](docs/screenshots/selecao.jpg) |
+| ![Desfiladeiro Estelar](docs/screenshots/desfiladeiro.jpg) | ![Cidadela do Eclipse](docs/screenshots/cidadela.jpg) |
+| ![Chefe: Nox](docs/screenshots/chefe.jpg) | ![Tela dividida](docs/screenshots/tela-dividida.jpg) |
 
-![Diálogo](docs/screenshots/dialogo.png)
+![Diálogo](docs/screenshots/dialogo.jpg)
 
 ## Personagens
 

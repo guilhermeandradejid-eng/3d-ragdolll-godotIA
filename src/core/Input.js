@@ -73,7 +73,13 @@ export class Input {
     });
     window.addEventListener('gamepaddisconnected', (e) => {
       const d = this.devices.get('pad' + e.gamepad.index);
-      if (d) d.connected = false;
+      if (d) {
+        d.connected = false;
+        d.move.x = d.move.y = d.cam.x = d.cam.y = 0;
+        d.jump = d.spin = d.pound = false;
+        d.pressed = {};
+        d.released = {};
+      }
       this.onPadChange?.('disconnected', e.gamepad);
     });
   }

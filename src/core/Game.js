@@ -82,6 +82,7 @@ export class Game {
   transitionTo(fn) {
     if (this.state === 'transition') return;
     this.state = 'transition';
+    this.audio.duck(false);
     this.ui.curtain(true);
     setTimeout(async () => {
       try {
@@ -352,6 +353,7 @@ export class Game {
   // ------------------------------------------------------------------ pausa
   pause(byDevice) {
     this.state = 'paused';
+    this.audio.duck(true);
     const w = this.world;
     w.grade.desaturate = 0.5;
     const items = [
@@ -368,6 +370,7 @@ export class Game {
 
   resume() {
     this.state = 'play';
+    this.audio.duck(false);
     this.world.grade.desaturate = 0;
     this.ui.hideOverlay();
   }

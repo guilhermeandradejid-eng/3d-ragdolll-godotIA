@@ -52,9 +52,10 @@ function makeMarker(slot, color) {
   g.fillText('J' + (slot + 1), 48, 27);
   const tex = new THREE.CanvasTexture(c);
   tex.colorSpace = THREE.SRGBColorSpace;
-  const mat = new THREE.SpriteMaterial({ map: tex, depthTest: false, transparent: true, opacity: 0.9 });
+  // tamanho constante na tela (legível mesmo com a câmera longe)
+  const mat = new THREE.SpriteMaterial({ map: tex, depthTest: false, transparent: true, opacity: 0.92, sizeAttenuation: false });
   const sp = new THREE.Sprite(mat);
-  sp.scale.set(0.62, 0.465, 1);
+  sp.scale.set(0.052, 0.039, 1);
   sp.renderOrder = 40;
   return sp;
 }
